@@ -1,18 +1,18 @@
-ventas = []
+sales_list = []
 
-def registrar_venta():
+def register_sale():
 
-    producto = input("Nombre del producto: ")
-    precio = float(input("Precio del producto: "))
-    cantidad = int(input("Cantidad vendida: "))
+    product_name = input("Enter product name: ")
+    product_price = float(input("Enter product price: "))
+    product_quantity = int(input("Enter quantity sold: "))
 
-    venta = {
-        "producto": producto,
-        "precio": precio,
-        "cantidad": cantidad
+    sale = {
+        "product": product_name,
+        "price": product_price,
+        "quantity": product_quantity
     }
 
-    ventas.append(venta)
+    sales_list.append(sale)
 
-    print("Venta registrada correctamente")
+    print("Sale registered successfully")
     
