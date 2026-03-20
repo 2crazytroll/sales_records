@@ -1,14 +1,14 @@
-from sales import sales_list
 
-def calculate_totals():
+def calculate_totals(list):
 
     total_money = 0
     total_units = 0
-
-    for sale in sales_list:
-        total_money += sale["price"] * sale["quantity"]
+    for sale in list:
+        total_money += sale["total"] 
         total_units += sale["quantity"]
 
-    print("\n----- TOTALS -----")
-    print("Total units sold:", total_units)
+    print("\n----- TOTALS -----\n"
+          "Total units sold:", total_units)
     print("Total revenue:", total_money)
+
+    

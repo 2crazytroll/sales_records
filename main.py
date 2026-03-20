@@ -1,8 +1,9 @@
- # sale records
+# sale records
 from sales import register_sale
 from summary import show_summary
 from totals import calculate_totals
 
+list= []
 option = ""
 
 while option != "4":
@@ -16,13 +17,14 @@ while option != "4":
     option = input("Select an option: ")
 
     if option == "1":
-        register_sale()
+        valor=register_sale()
+        list.append(valor)
 
     elif option == "2":
-        show_summary()
+        show_summary(list)
 
     elif option == "3":
-        calculate_totals()
+        calculate_totals(list)
 
     elif option == "4":
         print("Program finished")

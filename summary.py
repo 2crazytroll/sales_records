@@ -1,16 +1,14 @@
-from sales import sales_list
+def show_summary(list):
 
-def show_summary():
-
-    if len(sales_list) == 0:
+    if  list == "":
         print("No sales registered")
         return
 
     print("\n----- SALES SUMMARY -----")
 
-    for sale in sales_list:
+    for sale in list:
         print(
-            "Product:", sale["product"],
-            "| Price:", sale["price"],
-            "| Quantity:", sale["quantity"]
+            f"Product: { sale["name"]}\n"
+            f"Price: {sale["price"]}\n"
+            f"Quantity: {sale["quantity"]}\n"
         )
